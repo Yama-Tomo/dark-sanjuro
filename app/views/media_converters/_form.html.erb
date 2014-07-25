@@ -1,0 +1,36 @@
+<div class="row"> 
+  <div class="span6"> 
+  <%= form_for(@media_converter,  {:html => { class: "form-horizontal" }}) do |f| %>
+    <%= render "partials/form_error_messages", model: @media_converter %>
+
+    <% %w(name manufacturer trans_lost_from trans_lost_to fiber_type code_core_num price buying_price sale_price ).each do |name| %>
+    <div class="control-group">
+      <%= label_field f, name %>
+      <div class="controls"><%= f.text_field name %></div>
+    </div>
+    <% end %>
+
+    <% name = "bandwidth" %>
+    <div class="control-group">
+      <%= label_field f, name %>
+      <div class="controls"><%= f.select(name, MediaConverter.bandwidths, {}, {class: 'form-control'}) %></div>
+    </div>
+
+    <% name = "desc" %>
+    <div class="control-group">
+      <%= label_field f, name %>
+      <div class="controls"><%= f.text_field name %></div>
+    </div>
+  
+    <div class="actions">
+      <% if mode == :new %>
+      <%= f.submit "作成", class:"btn btn-primary pull-right clearfix" %>
+      <% else %>
+      <%= f.submit "修正", class:"btn btn-primary pull-right clearfix" %>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
+</div>
+
+

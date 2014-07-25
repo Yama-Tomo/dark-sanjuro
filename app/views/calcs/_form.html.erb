@@ -1,0 +1,29 @@
+<h1 class="top-font">メディコン三十郎 とっぷぺーじ</h1>
+<br />
+
+<div class="row"> 
+  <div class="span6"> 
+  <%= form_for(@calc,  {:html => {class: "form-horizontal"}}) do |f| %>
+    <%= render "partials/form_error_messages", model: @calc %>
+
+    <% %w(relay_distance building_num admission_distance connector_num ).each do |name| %> 
+    <div class="control-group">
+      <%= label_field f, name %>
+      <div class="controls"><%= f.text_field name %></div>
+    </div>
+    <% end %>
+    <div class="control-group">
+      <%= f.label "帯域", class: "control-label" %>
+      <div class="controls">
+        <%= f.select("bandwidth", MediaConverter.bandwidths, {}, {class: 'form-control'})  %>
+      </div>
+    </div>
+        
+    <div class="actions">
+      <%= f.submit "計算ッ!", class:"btn btn-primary pull-right clearfix" %>
+    </div>
+  <% end %>
+  </div>
+</div>
+
+

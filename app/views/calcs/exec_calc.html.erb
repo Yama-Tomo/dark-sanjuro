@@ -1,0 +1,13 @@
+<%= render 'form' %>
+<hr />
+
+減衰値は <%= @attenuation %>dB です<br />
+<br />
+
+<% if @media_converters.size > 0 %>
+  対象機器が <%= @media_converters.size %>件 見つかりました<br />
+  <%= render "partials/media_converter_table", is_menu: false %>
+<% else %>
+  対象機器はありません
+<% end %>
+

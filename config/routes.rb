@@ -1,4 +1,10 @@
 App::Application.routes.draw do
+  resources :media_converters
+
+  match '/',  via: :get,  to: 'calcs#calc'
+  match '/',  via: :post, to: 'calcs#exec_calc', as: :calcs
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

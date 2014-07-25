@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  trans_lost_from: 1
+  trans_lost_to: 1
+  bandwidth: 1
+
+two:
+  name: MyString
+  trans_lost_from: 1
+  trans_lost_to: 1
+  bandwidth: 1

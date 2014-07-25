@@ -1,0 +1,56 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ja:
+  errors: &errors
+    format: ! '%{attribute}%{message}'
+    messages:
+      accepted: を受諾してください。
+      blank: を入力してください。
+      present: は入力しないでください。
+      confirmation: と%{attribute}の入力が一致しません。
+      empty: を入力してください。
+      equal_to: は%{count}にしてください。
+      even: は偶数にしてください。
+      exclusion: は予約されています。
+      greater_than: は%{count}より大きい値にしてください。
+      greater_than_or_equal_to: は%{count}以上の値にしてください。
+      inclusion: は一覧にありません。
+      invalid: は不正な値です。
+      less_than: は%{count}より小さい値にしてください。
+      less_than_or_equal_to: は%{count}以下の値にしてください。
+      not_a_number: は数値で入力してください。
+      not_an_integer: は整数で入力してください。
+      odd: は奇数にしてください。
+      record_invalid: バリデーションに失敗しました。 %{errors}
+      restrict_dependent_destroy: ! '%{record}が存在しているので削除できません。'
+      taken: はすでに存在します。
+      too_long: は%{count}文字以内で入力してください。
+      too_short: は%{count}文字以上で入力してください。
+      wrong_length: は%{count}文字で入力してください。
+      other_than: "は%{count}以外の値にしてください。"
+
+  activerecord:
+    attributes:
+      media_converter:
+        name:                           "機器名"
+        trans_lost_to:                  "伝送損失to"
+        trans_lost_from:                "伝送損失from"
+        bandwidth:                      "帯域"
+        fiber_type:                     "適合ファイバ"
+        code_core_num:                  "芯数"
+        manufacturer:                   "メーカー"
+        price:                          "定価"
+        buying_price:                   "仕入れ値"
+        sale_price:                     "販売価格"
+        desc:                           "備考"
+
+  activemodel:
+    attributes:
+      calc:
+        relay_distance:                 "中継距離(km)"
+        building_num:                   "局舎数"
+        admission_distance:             "加入距離(2拠点合計/km)"
+        connector_num:                  "1局あたりのコネクタ数(加入局)"
+        bandwidth:                      "帯域"
+

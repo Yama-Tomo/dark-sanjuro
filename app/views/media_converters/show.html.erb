@@ -1,0 +1,24 @@
+<table class="table table-bordered">
+  <% %w(name manufacturer).each do |name| %>
+  <tr>
+    <th><%= model_column_string @media_converter, name %></th>
+    <td><%= @media_converter.send name %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <th>伝送損失(dB)</th>
+    <td><%= @media_converter.trans_lost_from %> ~ <%= @media_converter.trans_lost_to %></td>
+  </tr>
+  <% %w(fiber_type code_core_num price buying_price sale_price bandwidth desc).each do |name| %>
+  <tr>
+    <th><%= model_column_string @media_converter, name %></th>
+    <% if ["price", "buying_price", "sale_price"].include? name %>
+    <td><%= number_to_currency @media_converter.send(name), format: '%u %n', unit: '¥', precision: 0 %></td>
+    <% else %>
+    <td><%= @media_converter.send name %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to '一覧へ戻る', media_converters_path %> <br />
