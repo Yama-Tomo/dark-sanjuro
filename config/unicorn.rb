@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-app_path = "/usr/local/products/dark_sanjuro/"
+app_path = "/usr/local/products/dark_sanjuro/current"
 
 # ワーカーの数
 if ENV['RAILS_ENV'] == "production"
