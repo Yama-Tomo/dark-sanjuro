@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'unicorn'
 gem 'rails', '3.2.13'
 gem 'mysql2',                   '> 0.3'
 
