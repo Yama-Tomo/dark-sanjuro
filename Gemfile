@@ -8,6 +8,14 @@ gem 'mysql2',                   '> 0.3'
 
 gem 'sqlite3'
 
+group :development do
+  # Capistraono (Deploy支援)
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano_colors'
+  gem 'capistrano-unicorn', github: 'sosedoff/capistrano-unicorn', require: false
+  gem 'rvm-capistrano'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/sosedoff/capistrano-unicorn.git
+  revision: 9e804e8e774e7688024349657573c0c1f088ca37
+  specs:
+    capistrano-unicorn (0.2.0)
+      capistrano (< 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,6 +37,15 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.3)
     builder (3.0.4)
+    capistrano (2.15.5)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
+    capistrano_colors (0.5.5)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -40,6 +56,7 @@ GEM
     commonjs (0.2.7)
     erubis (2.7.0)
     execjs (2.2.1)
+    highline (1.6.21)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -59,6 +76,13 @@ GEM
     mime-types (1.25.1)
     multi_json (1.10.1)
     mysql2 (0.3.15)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.1)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     polyglot (0.3.5)
     rack (1.4.5)
     rack-cache (1.2)
@@ -86,6 +110,8 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
+    rvm-capistrano (1.5.3)
+      capistrano (~> 2.15.4)
     sass (3.3.10)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -119,11 +145,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano
+  capistrano-ext
+  capistrano-unicorn!
+  capistrano_colors
   coffee-rails (~> 3.2.1)
   jquery-rails
   less-rails
   mysql2 (> 0.3)
   rails (= 3.2.13)
+  rvm-capistrano
   sass-rails (~> 3.2.3)
   sqlite3
   therubyracer
