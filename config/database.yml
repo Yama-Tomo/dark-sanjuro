@@ -21,6 +21,10 @@ test:
   adapter:   mysql2
   database:  test_dark_sanjuro
 
+staging:
+  adapter:   mysql2
+  database:  dark_sanjuro
+
 production:
   adapter:   mysql2
   database:  dark_sanjuro
