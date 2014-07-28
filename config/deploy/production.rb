@@ -19,5 +19,5 @@ set :app_user,         'unicorn'
 set :app_user_group,   'unicorn'
 
 ################### role ###################
-server "10.218.240.227", :app, :web, :db, :primary => true
+server "10.218.240.248", :app, :web, :db, :primary => true
 

@@ -28,3 +28,6 @@ staging:
 production:
   adapter:   mysql2
   database:  dark_sanjuro
+  username:  root
+  password:  zaq12wsx
+ 
