@@ -1,10 +1,11 @@
+<% dummy = MediaConverter.new %>
 <table class="table table-bordered">
   <tr>
-    <th><%= model_column_string @media_converters.first, "name" %></th>
-    <th><%= model_column_string @media_converters.first, "manufacturer" %></th>
+    <th><%= model_column_string dummy, "name" %></th>
+    <th><%= model_column_string dummy, "manufacturer" %></th>
     <th>伝送損失(dB)</th>
     <% %w( fiber_type code_core_num price buying_price sale_price bandwidth desc).each do |name| %>
-    <th><%= model_column_string @media_converters.first, name %></th>
+    <th><%= model_column_string dummy, name %></th>
     <% end %>
     <% if is_menu == true %>
     <th></th>
