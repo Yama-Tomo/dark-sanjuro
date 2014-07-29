@@ -2,22 +2,78 @@
 <br />
 
 <div class="row"> 
-  <div class="span6"> 
-  <%= form_for(@calc,  {:html => {class: "form-horizontal"}}) do |f| %>
+  <div class="span8"> 
+  <%= form_for(@calc,  {:html => {class: "form-inline"}}) do |f| %>
     <%= render "partials/form_error_messages", model: @calc %>
 
-    <% %w(relay_distance building_num admission_distance connector_num ).each do |name| %> 
-    <div class="control-group">
-      <%= label_field f, name %>
-      <div class="controls"><%= f.text_field name %></div>
-    </div>
-    <% end %>
-    <div class="control-group">
-      <%= f.label "帯域", class: "control-label" %>
-      <div class="controls">
-        <%= f.select("bandwidth", MediaConverter.bandwidths, {}, {class: 'form-control'})  %>
-      </div>
-    </div>
+    <table class="table">
+      <tr>
+        <th><%= label_field f, "relay_distance" %></th>
+        <th></th>
+        <th><%= label_field f, "relay_distance_attenuation" %></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td><%= f.text_field "relay_distance", style: "width:100px;" %></td>
+        <td> x </td>
+        <td><%= f.text_field "relay_distance_attenuation", style: "width:50px;" %></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <th><%= label_field f, "building_num" %></th>
+        <th></th>
+        <th><%= label_field f, "connector_num_per_builing" %></th>
+        <th></th>
+        <th><%= label_field f, "bilding_num_attenuation" %></th>
+      </tr>
+      <tr>
+        <td><%= f.text_field "building_num", style: "width:100px;" %></td>
+        <td> x </td>
+        <td><%= f.text_field "connector_num_per_builing", style: "width:50px;" %></td>
+        <td> x </td>
+        <td><%= f.text_field "bilding_num_attenuation", style: "width:50px;" %></td>
+      </tr>
+
+      <tr>
+        <td><%= label_field f, "admission_distance" %></td>
+        <td></td>
+        <td><%= label_field f, "admission_distance_attenuation" %></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field "admission_distance", style: "width:100px;" %></td>
+        <td> x </td>
+        <td><%= f.text_field "admission_distance_attenuation", style: "width:50px;" %></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><%= label_field f, "start_and_end_point_num" %></td>
+        <td></td>
+        <td><%= label_field f, "connector_num" %></td>
+        <td></td>
+        <td><%= label_field f, "start_and_end_point_num_attenuation" %></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field "start_and_end_point_num", style: "width:50px;" %></td>
+        <td> x </td>
+        <td><%= f.text_field "connector_num", style: "width:100px;" %></td>
+        <td> x </td>
+        <td><%= f.text_field "start_and_end_point_num_attenuation", style: "width:50px;" %></td>
+      </tr>
+
+      <tr>
+        <td> <%= f.label "帯域", class: "control-label" %></td>
+        <td colspan="4">
+          <%= f.select("bandwidth", MediaConverter.bandwidths, {}, {class: 'form-control'})  %>
+        </td>
+      </tr>
+   </table>
         
     <div class="actions">
       <%= f.submit "計算ッ!", class:"btn btn-primary pull-right clearfix" %>

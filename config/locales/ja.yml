@@ -53,4 +53,10 @@ ja:
         admission_distance:             "加入距離(2拠点合計/km)"
         connector_num:                  "1局あたりのコネクタ数(加入局)"
         bandwidth:                      "帯域"
+        relay_distance_attenuation:     "減衰率"
+        connector_num_per_builing:      "1局あたりのコネクタ数"
+        bilding_num_attenuation:        "減衰率"
+        admission_distance_attenuation: "減衰率"
+        start_and_end_point_num_attenuation: "減衰率"
+        start_and_end_point_num:        "始点・終点拠点数"
 
